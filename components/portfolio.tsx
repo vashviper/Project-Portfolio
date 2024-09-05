@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge"
 import { Github, Linkedin, Mail, Menu, X } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { ReactNode } from 'react';
 
 export function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -97,7 +98,7 @@ export function Portfolio() {
               </div>
               <div className="flex items-center justify-center">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/sherajhero.jpg"
                   alt="Hero Image"
                   width={400}
                   height={400}
@@ -219,7 +220,13 @@ export function Portfolio() {
   )
 }
 
-function ProjectCard({ title, description, details }) {
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  details: string;
+}
+
+function ProjectCard({ title, description, details }: ProjectCardProps) {
   return (
     <Card className="overflow-hidden transition-all duration-200 hover:shadow-lg hover:-translate-y-1 bg-gray-700 border-gray-600">
       <CardHeader>
@@ -238,7 +245,11 @@ function ProjectCard({ title, description, details }) {
   )
 }
 
-function AnimatedBadge({ children }) {
+interface AnimatedBadgeProps {
+  children: ReactNode;
+}
+
+function AnimatedBadge({ children }: AnimatedBadgeProps) {
   return (
     <Badge className="transition-all duration-200 hover:bg-cyan-600 hover:text-white transform hover:scale-110 bg-gray-700 text-cyan-400">
       {children}
