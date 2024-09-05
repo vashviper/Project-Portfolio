@@ -20,37 +20,37 @@ export function Portfolio() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-gray-100">
       <header className="sticky top-0 z-50 w-full border-b border-gray-800 bg-gray-900/95 backdrop-blur supports-[backdrop-filter]:bg-gray-900/60">
-        <div className="container flex h-14 items-center">
-          <div className="mr-4 hidden md:flex">
-            <Link className="mr-6 flex items-center space-x-2" href="/">
-              <span className="hidden font-bold sm:inline-block">Sheraj Hussein</span>
-            </Link>
-            <nav className="flex items-center space-x-6 text-sm font-medium">
-              <Link className="transition-colors hover:text-cyan-400" href="#projects">Projects</Link>
-              <Link className="transition-colors hover:text-cyan-400" href="#skills">Skills</Link>
-              <Link className="transition-colors hover:text-cyan-400" href="#contact">Contact</Link>
-            </nav>
-          </div>
-          <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-            <div className="w-full flex-1 md:w-auto md:flex-none">
+        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+          <div className="flex h-14 items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <Link className="flex items-center space-x-2" href="/">
+                <span className="hidden font-bold sm:inline-block">Sheraj Hussein</span>
+              </Link>
+              <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <Link className="transition-colors hover:text-cyan-400" href="#projects">Projects</Link>
+                <Link className="transition-colors hover:text-cyan-400" href="#skills">Skills</Link>
+                <Link className="transition-colors hover:text-cyan-400" href="#contact">Contact</Link>
+              </nav>
+            </div>
+            <div className="flex items-center space-x-4">
+              <nav className="hidden md:flex items-center space-x-4">
+                <Link href="https://github.com" target="_blank" rel="noreferrer">
+                  <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-gray-800 hover:text-cyan-400 h-9 py-2 w-9 px-0">
+                    <Github className="h-5 w-5" />
+                    <span className="sr-only">GitHub</span>
+                  </div>
+                </Link>
+                <Link href="https://linkedin.com" target="_blank" rel="noreferrer">
+                  <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-gray-800 hover:text-cyan-400 h-9 py-2 w-9 px-0">
+                    <Linkedin className="h-5 w-5" />
+                    <span className="sr-only">LinkedIn</span>
+                  </div>
+                </Link>
+              </nav>
               <Button variant="ghost" className="md:hidden" onClick={toggleMenu}>
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </Button>
             </div>
-            <nav className="flex items-center">
-              <Link href="https://github.com" target="_blank" rel="noreferrer">
-                <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-gray-800 hover:text-cyan-400 h-9 py-2 w-9 px-0">
-                  <Github className="h-5 w-5" />
-                  <span className="sr-only">GitHub</span>
-                </div>
-              </Link>
-              <Link href="https://linkedin.com" target="_blank" rel="noreferrer">
-                <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-gray-800 hover:text-cyan-400 h-9 py-2 w-9 px-0">
-                  <Linkedin className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
-                </div>
-              </Link>
-            </nav>
           </div>
         </div>
       </header>
@@ -75,12 +75,12 @@ export function Portfolio() {
       )}
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6 max-w-6xl">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-cyan-400">
-                    Jane Doe
+                    Sheraj Hussein
                   </h1>
                   <p className="max-w-[600px] text-gray-300 md:text-xl">
                     Web3 Developer | AI Enthusiast | AR/VR Developer
@@ -108,7 +108,7 @@ export function Portfolio() {
           </div>
         </section>
         <section id="projects" className="w-full py-12 md:py-24 lg:py-32 bg-gray-800">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6 max-w-6xl">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-white to-cyan-400">Projects</h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <ProjectCard
@@ -130,7 +130,7 @@ export function Portfolio() {
           </div>
         </section>
         <section id="skills" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6 max-w-4xl">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-white to-cyan-400">Skills</h2>
             <Tabs defaultValue="frontend" className="w-full">
               <TabsList className="grid w-full grid-cols-3 bg-gray-800">
@@ -170,9 +170,9 @@ export function Portfolio() {
           </div>
         </section>
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gray-800">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6 max-w-2xl">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-white to-cyan-400">Contact Me</h2>
-            <div className="mx-auto max-w-[600px]">
+            <div className="mx-auto">
               <form className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="name">Name</Label>
@@ -193,7 +193,7 @@ export function Portfolio() {
         </section>
       </main>
       <footer className="w-full py-6 bg-gray-800">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <p className="text-center text-sm leading-loose text-gray-400 md:text-left">
               © 2024 Sheraj Hussein. All rights reserved.
